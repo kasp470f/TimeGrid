@@ -5,14 +5,14 @@ using UnityEngine;
 public class SoundControllerScript : MonoBehaviour
 {
     public static AudioClip playerMovement, playerPickup;
-    static AudioSource audioSource;
+    static AudioSource audioSrc;
 
     private void Start()
     {
         playerMovement = Resources.Load<AudioClip>("movement");
         playerPickup = Resources.Load<AudioClip>("pickup");
 
-        audioSource = GetComponent<AudioSource>();
+        audioSrc = GetComponent<AudioSource>();
     }
 
     public static void PlaySound(string clip)
@@ -20,11 +20,11 @@ public class SoundControllerScript : MonoBehaviour
         switch (clip)
         {
             case "movement":
-                audioSource.PlayOneShot(playerMovement);
+                audioSrc.PlayOneShot(playerMovement);
                 break;
 
             case "pickup":
-                audioSource.PlayOneShot(playerPickup);
+                audioSrc.PlayOneShot(playerPickup);
                 break;
         }
     }
