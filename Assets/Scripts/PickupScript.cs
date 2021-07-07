@@ -11,6 +11,7 @@ public class PickupScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(collision.gameObject);
+        SoundControllerScript.PlaySound("pickup");
         gameController.GetComponent<ScoreScript>().score++;
         gameController.GetComponent<CountdownController>().AddTime(2f);
         gameController.GetComponent<SpawnScript>().SpawnBlock();

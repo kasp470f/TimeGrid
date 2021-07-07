@@ -44,7 +44,6 @@ public class CountdownController : MonoBehaviour
             if (gameover)
             {
                 countdownDisplay.text = string.Format("GAME OVER");
-                gameObject.GetComponent<ScoreScript>().DisplayScore();
             }
             else countdownDisplay.text = string.Format("{0}s {1}ms", seconds.ToString().PadLeft(2, '0'), Mathf.Round(miliseconds).ToString().PadLeft(2, '0'));
 

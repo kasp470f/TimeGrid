@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 12b5fe6d7bbabd649aee6ff104f795ce
+guid: 13de83afab0ba8d40846bb12bee5b918
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8517436916285980951
-    second: 3 tiles_0
+      213: -8932076450900426793
+    second: 4 tiles_0
   - first:
-      213: -5805669405798405155
-    second: 3 tiles_1
+      213: -6663387345998562471
+    second: 4 tiles_1
   - first:
-      213: -5822602584112479091
-    second: 3 tiles_2
+      213: 3573760751975515589
+    second: 4 tiles_2
+  - first:
+      213: 2635981342168045586
+    second: 4 tiles_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 3 tiles_0
+      name: 4 tiles_0
       rect:
         serializedVersion: 2
         x: 0
@@ -126,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71146008fb3043670800000000000000
-      internalID: 8517436916285980951
+      spriteID: 7dfb275cac3ea0480800000000000000
+      internalID: -8932076450900426793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3 tiles_1
+      name: 4 tiles_1
       rect:
         serializedVersion: 2
         x: 32
@@ -147,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddb68086f6e1e6fa0800000000000000
-      internalID: -5805669405798405155
+      spriteID: 95b3ce05384e683a0800000000000000
+      internalID: -6663387345998562471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3 tiles_2
+      name: 4 tiles_2
       rect:
         serializedVersion: 2
         x: 64
@@ -168,8 +171,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8444b99cc5f13fa0800000000000000
-      internalID: -5822602584112479091
+      spriteID: 5c5cbb5287c889130800000000000000
+      internalID: 3573760751975515589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4 tiles_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 218db7e8013e49420800000000000000
+      internalID: 2635981342168045586
       vertices: []
       indices: 
       edges: []

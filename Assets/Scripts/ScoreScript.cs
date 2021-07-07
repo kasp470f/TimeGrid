@@ -8,9 +8,12 @@ public class ScoreScript : MonoBehaviour
     public int score;
     public Text scoreDisplay;
 
-    public void DisplayScore()
+    private void Update()
     {
-        scoreDisplay.gameObject.SetActive(true);
-        scoreDisplay.text = $"Score: {score}";
+        if (gameObject.GetComponent<GameControllerScript>().start == true)
+        {
+            scoreDisplay.gameObject.SetActive(true);
+            scoreDisplay.text = $"Score: {score}";
+        }
     }
 }

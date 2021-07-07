@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridBasedMovementMobile : MonoBehaviour
+public class GridBasedMovement : MonoBehaviour
 {
     public float moveSpeed;
     public LayerMask solidObjectLayer;
@@ -21,31 +21,32 @@ public class GridBasedMovementMobile : MonoBehaviour
                 {
                     Touch touch = Input.GetTouch(0);
 
-                    if (touch.phase == TouchPhase.Began)
+                    var targetPos = transform.position;
+
+                    if (touch.position.y < Screen.height - Screen.height / 6) // So not hit top screen
                     {
-                        var targetPos = transform.position;
-
-                        if (touch.position.y < Screen.height - Screen.height / 6) // So not hit top screen
+                        if (touch.position.y > Screen.height - Screen.height / 2.5) // Top
                         {
-                            if (touch.position.y > Screen.height - Screen.height / 2.5) // Top
-                            {
-                                targetPos += new Vector3(0f, 1f);
-                            }
-                            else if (touch.position.y < Screen.height / 5) // Bottom
-                            {
-                                targetPos += new Vector3(0f, -1f);
-                            }
-                            else if (touch.position.x < Screen.width / 2) // Left
-                            {
-                                targetPos += new Vector3(-1f, 0f);
-                            }
-                            else if (touch.position.x > Screen.width / 2) // Right
-                            {
-                                targetPos += new Vector3(1f, 0f);
-                            }
+                            targetPos += new Vector3(0f, 1f);
                         }
+                        else if (touch.position.y < Screen.height / 5) // Bottom
+                        {
+                            targetPos += new Vector3(0f, -1f);
+                        }
+                        else if (touch.position.x < Screen.width / 2) // Left
+                        {
+                            targetPos += new Vector3(-1f, 0f);
+                        }
+                        else if (touch.position.x > Screen.width / 2) // Right
+                        {
+                            targetPos += new Vector3(1f, 0f);
+                        }
+                    }
 
-                        if (IsWalkable(targetPos)) StartCoroutine(Move(targetPos));
+                    if (IsWalkable(targetPos))
+                    {
+                        StartCoroutine(Move(targetPos));
+                        SoundControllerScript.PlaySound("movement");
                     }
                 }
             }
