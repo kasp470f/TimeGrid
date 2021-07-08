@@ -12,7 +12,7 @@ public class PickupScript : MonoBehaviour
     {
         Destroy(collision.gameObject);
         SoundControllerScript.PlaySound("pickup");
-        gameController.GetComponent<ScoreScript>().score++;
+        gameController.GetComponent<LevelScript>().level++;
         gameController.GetComponent<CountdownController>().AddTime(2f);
         gameController.GetComponent<SpawnScript>().SpawnBlock();
     }

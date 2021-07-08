@@ -17,7 +17,7 @@ public class GameControllerScript : MonoBehaviour
     {
         if(!start)
         {
-            if(Input.touchCount == 1)
+            if(Input.touchCount == 1 || Input.GetMouseButtonDown(0))
             {
                 startDisplay.gameObject.SetActive(false);
                 start = true;
